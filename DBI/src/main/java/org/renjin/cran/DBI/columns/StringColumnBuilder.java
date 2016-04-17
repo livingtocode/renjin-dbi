@@ -16,7 +16,7 @@ public class StringColumnBuilder implements ColumnBuilder {
       return columnType.equals("string") || columnType.equals("text") || columnType.equals("clob")
           || columnType.startsWith("varchar") || columnType.endsWith("char")
           || columnType.equals("date") || columnType.equals("time") || columnType.equals("null")
-          || columnType.equals("unknown");
+          || columnType.equals("unknown") || columnType.equals("uuid");
     }
 
     public void addValue(ResultSet rs, int columnIndex) throws SQLException {
